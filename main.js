@@ -14,20 +14,14 @@ let forceH = -2;
 let forceW = -2;
 
 function animation(){
-    if(topPos==0){
+   if(topPos==0 || leftPos==0){
         forceH *= -1;
-        
-    }
-    else if(topPos == maxHeight - titre.offsetHeight){
-        forceH *= -1;
-    }
-
-
-    if(leftPos==0){
         forceW *= -1;
+
         
     }
-    else if(leftPos == maxWidth - titre.offsetWidth){
+    else if(topPos == maxHeight - titre.offsetHeight || leftPos == maxWidth - titre.offsetWidth ){
+        forceH *= -1;
         forceW *= -1;
     }
 
